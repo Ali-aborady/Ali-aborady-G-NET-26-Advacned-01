@@ -128,6 +128,25 @@
 
             #endregion
 
+            #region Question 7
+            //What is the 'struct' constraint? Write an example.
+            /*
+            The 'struct' constraint restricts T to VALUE TYPES ONLY
+            (int, double, bool, DateTime, custom structs, etc.)
+            This guarantees T is never null.
+
+            Syntax: where T : struct
+            */
+
+            //var intWrapper = new ValueWrapper<int>();
+            //Console.WriteLine(intWrapper.GetOrDefault()); // 0 
+
+            //intWrapper.Set(42);
+            //Console.WriteLine(intWrapper.GetOrDefault()); // 42
+
+            #endregion
+
+
 
 
 
