@@ -207,6 +207,24 @@ namespace Adv_Csharp
 
             #endregion
 
+            #region Question 11
+            //What is the base class constraint? Write an example.
+
+            /*
+            A BASE CLASS CONSTRAINT restricts T to a specific class
+            OR any class that INHERITS from it.
+            This lets you access the base class members inside the generic.
+
+            Syntax: where T : BaseClassName
+            */
+
+            //var circles = new ShapeCollection<Circle>();
+            //circles.Add(new Circle { Radius = 5, Color = "Red" });
+            //circles.Add(new Circle { Radius = 3, Color = "Blue" });
+            //circles.DescribeAll();
+            //Console.WriteLine($"Total area: {circles.TotalArea():F2}");
+
+            #endregion
 
 
 
