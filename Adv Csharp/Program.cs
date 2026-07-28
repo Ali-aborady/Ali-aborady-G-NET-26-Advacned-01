@@ -169,13 +169,13 @@ namespace Adv_Csharp
             #region Question 9
             //What is the 'new()' constraint? Write an example.
 
-                /*
-                The 'new()' constraint requires T to have a PUBLIC PARAMETERLESS CONSTRUCTOR.
-                This allows you to create new instances of T inside the generic class/method.
-                
-                Syntax: where T : new ()
-                Note: new () must be the LAST constraint if combined with others.
-                */
+            /*
+            The 'new()' constraint requires T to have a PUBLIC PARAMETERLESS CONSTRUCTOR.
+            This allows you to create new instances of T inside the generic class/method.
+
+            Syntax: where T : new ()
+            Note: new () must be the LAST constraint if combined with others.
+            */
 
             //var animalFactory = new Factory<Animal>();
             //Animal a = animalFactory.Create();
@@ -189,6 +189,24 @@ namespace Adv_Csharp
             //Console.WriteLine(n); 
 
             #endregion
+
+            #region Question 10
+            //What is the interface constraint? Write an example.
+
+            /*
+            An INTERFACE CONSTRAINT restricts T to types that
+            implement a specific interface.
+            This lets you call interface methods on T inside the generic class.
+
+            Syntax: where T : IInterfaceName
+            */
+            //var printer = new Printer<Document>();
+            //printer.Add(new Document { Title = "C# Guide", Pages = 300 });
+            //printer.Add(new Document { Title = "Generics", Pages = 150 });
+            //printer.PrintAll();
+
+            #endregion
+
 
 
 

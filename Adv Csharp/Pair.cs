@@ -25,4 +25,3 @@ namespace Adv_Csharp
                $"Value: {Value} ({typeof(TValue).Name})";
     }
 }
-}
