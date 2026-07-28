@@ -37,6 +37,24 @@
 
             #endregion
 
+            #region Question 2
+            //Generic Class Container<T> with Add and Get
+
+            //// Integer container
+            //Container<int> intContainer = new Container<int>();
+            //intContainer.Add(10);
+            //intContainer.Add(20);
+            //Console.WriteLine(intContainer.Get(0)); 
+            //Console.WriteLine(intContainer.Get(1)); 
+
+            //// String container
+            //Container<string> strContainer = new Container<string>();
+            //strContainer.Add("Hello");
+            //strContainer.Add("World");
+            //Console.WriteLine(strContainer.Get(0)); 
+
+            #endregion
+
         }
     }
 }
