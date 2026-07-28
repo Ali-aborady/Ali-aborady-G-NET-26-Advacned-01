@@ -229,16 +229,16 @@ namespace Adv_Csharp
             #region Question 12
             //How do you apply multiple constraints? Write an example. 
 
-                /*
-                You can apply MULTIPLE constraints to a type parameter.
-                All must be satisfied at the same time.
+            /*
+            You can apply MULTIPLE constraints to a type parameter.
+            All must be satisfied at the same time.
 
-                Order rules:
-                1. class / struct    (if used)
-                2. Base class        (only one allowed)
-                3. Interface(s)      (as many as needed)
-                4. new()             (always LAST)
-                */
+            Order rules:
+            1. class / struct    (if used)
+            2. Base class        (only one allowed)
+            3. Interface(s)      (as many as needed)
+            4. new()             (always LAST)
+            */
 
             //var repo = new SmartRepository<Employee>();
 
@@ -249,6 +249,29 @@ namespace Adv_Csharp
             //repo.Add(repo.CreateNew(2, "Sara"));
 
             //repo.DescribeAll();
+            #endregion
+
+            #region Question 13
+            //What does the 'default' keyword do in generics?
+            /*
+            The 'default' keyword returns the DEFAULT VALUE for type T:
+            -0         for numeric types (int, double, etc.)
+            -false     for bool
+            - '\0'      for char
+            - null      for reference types (class, string, interface)
+            - zeroed struct for value types
+            */
+
+            //Console.WriteLine(DefaultDemo.GetDefault<int>());     // 0
+            //Console.WriteLine(DefaultDemo.GetDefault<bool>());    // False
+            //Console.WriteLine(DefaultDemo.GetDefault<double>());  // 0
+            //Console.WriteLine(DefaultDemo.GetDefault<string>() == null); // True
+            //Console.WriteLine(DefaultDemo.GetDefault<DateTime>()); // 01/01/0001
+
+            //int[] nums = { 10, 20, 30 };
+            //Console.WriteLine(DefaultDemo.GetValueOrDefault(nums, 1));  // 20
+            //Console.WriteLine(DefaultDemo.GetValueOrDefault(nums, 99)); // 0 (default)
+
             #endregion
 
 
