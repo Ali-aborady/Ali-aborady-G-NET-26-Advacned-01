@@ -420,6 +420,57 @@ namespace Adv_Csharp
 
             #endregion
 
+            #region Question 20
+            // Complete Exercise - Create a generic Cache<TKey, TValue>with Add, Get, Remove, Contains, and expiration support. 
+
+            Console.WriteLine("=== Generic Cache<TKey, TValue> Demo ===\n");
+
+            // Cache with 5-second default TTL
+            var cache = new Cache<string, string>(TimeSpan.FromSeconds(5));
+
+            // Add entries
+            cache.Add("user:1", "Ahmed");
+            cache.Add("user:2", "Sara");
+            cache.Add("token", "abc123", TimeSpan.FromSeconds(2)); // short TTL
+
+            Console.WriteLine();
+            cache.PrintStats();
+
+            // Get existing
+            Console.WriteLine();
+            cache.TryGet("user:1", out string val);
+            Console.WriteLine($"Got: {val}");    // Ahmed
+
+            // Contains check
+            Console.WriteLine($"Contains user:2? {cache.Contains("user:2")}"); // True
+            Console.WriteLine($"Contains missing? {cache.Contains("x")}");     // False
+
+            // Remove
+            Console.WriteLine();
+            cache.Remove("user:2");
+            Console.WriteLine($"Contains user:2 after remove? {cache.Contains("user:2")}"); // False
+
+            // Simulate expiration
+            Console.WriteLine("\nWaiting 3 seconds for 'token' to expire...");
+            System.Threading.Thread.Sleep(3000);
+
+            Console.WriteLine();
+            cache.TryGet("token", out string token); // EXPIRED
+            cache.Cleanup(); // remove expired entries
+
+            Console.WriteLine();
+            cache.PrintStats(); // only user:1 remains
+
+            // Integer cache demo
+            Console.WriteLine("\n=== Integer Cache Demo ===");
+            var intCache = new Cache<int, double>(TimeSpan.FromMinutes(10));
+            intCache.Add(1, 3.14);
+            intCache.Add(2, 2.71);
+            Console.WriteLine($"Key 1 → {intCache.Get(1)}"); // 3.14
+            Console.WriteLine($"Key 9 → {intCache.Get(9)}"); // 0 (default
+
+            #endregion
+
         }
     }
 }
