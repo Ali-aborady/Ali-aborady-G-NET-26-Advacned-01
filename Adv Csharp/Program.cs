@@ -226,7 +226,30 @@ namespace Adv_Csharp
 
             #endregion
 
+            #region Question 12
+            //How do you apply multiple constraints? Write an example. 
 
+                /*
+                You can apply MULTIPLE constraints to a type parameter.
+                All must be satisfied at the same time.
+
+                Order rules:
+                1. class / struct    (if used)
+                2. Base class        (only one allowed)
+                3. Interface(s)      (as many as needed)
+                4. new()             (always LAST)
+                */
+
+            //var repo = new SmartRepository<Employee>();
+
+            //var e = repo.CreateNew(1, "Ahmed");
+            //e.Department = "Engineering";
+            //repo.Add(e);
+
+            //repo.Add(repo.CreateNew(2, "Sara"));
+
+            //repo.DescribeAll();
+            #endregion
 
 
 
