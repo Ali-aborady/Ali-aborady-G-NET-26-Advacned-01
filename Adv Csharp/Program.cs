@@ -97,11 +97,11 @@
             #region Question 5
             //Generic Method FindMax<T>
 
-                /*
-                FindMax<T> finds the largest element in an array.
-                We need T to implement IComparable<T> so we can compare values.
-                This is a generic constraint (covered in Q10).
-                */
+            /*
+            FindMax<T> finds the largest element in an array.
+            We need T to implement IComparable<T> so we can compare values.
+            This is a generic constraint (covered in Q10).
+            */
 
             //int[] ints = { 3, 7, 1, 9, 4 };
             //double[] doubles = { 1.5, 3.2, 0.8, 2.9 };
@@ -112,6 +112,22 @@
             //Console.WriteLine(SearchHelper.FindMax(words));   // cherry
 
             #endregion
+
+            #region Question 6
+            //Generic Interface: IRepository<T>
+
+            //var repo = new ProductRepository();
+            //repo.Add(new Product { Id = 1, Name = "Laptop", Price = 999.99 });
+            //repo.Add(new Product { Id = 2, Name = "Phone", Price = 499.99 });
+
+            //Console.WriteLine(repo.GetById(1)); 
+            //foreach (var p in repo.GetAll())
+            //    Console.WriteLine(p);
+
+            //repo.Remove(1);
+
+            #endregion
+
 
 
 
