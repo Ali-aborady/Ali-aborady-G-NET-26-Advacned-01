@@ -146,6 +146,24 @@
 
             #endregion
 
+            #region Question 8
+            //What is the 'class' constraint? Write an example
+            /*
+            The 'class' constraint restricts T to REFERENCE TYPES ONLY
+            (string, class instances, arrays, interfaces, delegates, etc.)
+            This means T can be null.
+
+            Syntax: where T : class
+            */
+
+            //var checker = new NullChecker<string>();
+            //Console.WriteLine(checker.IsNull(null));   // True
+            //Console.WriteLine(checker.IsNull("hello"));// False
+            //Console.WriteLine(checker.Describe("C#")); // String: C#
+
+            #endregion
+
+
 
 
 
