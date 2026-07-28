@@ -55,6 +55,20 @@
 
             #endregion
 
+            #region Question 3
+            //Multiple Type Parameters: Pair<TKey, TValue>
+
+            //var p1 = new Pair<string, int>("Age", 25);
+            //Console.WriteLine(p1);
+
+            //var p2 = new Pair<int, double>(1, 3.14);
+            //Console.WriteLine(p2);
+
+            //var swapped = p1.Swap();
+            //Console.WriteLine(swapped);
+
+            #endregion
+
         }
     }
 }
