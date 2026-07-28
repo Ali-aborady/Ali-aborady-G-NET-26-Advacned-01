@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Adv_Csharp.Interfaces;
+using System.ComponentModel;
 using System.Data;
 
 namespace Adv_Csharp
@@ -292,7 +293,38 @@ namespace Adv_Csharp
             Console.WriteLine(safeStrings.Get(5) == null ? "null" : safeStrings.Get(5));
             #endregion
 
+            #region Question 15
+            //Write a SafeList<T> that returns default when the index is invalid.
+            /*
+            COVARIANCE (out keyword on interfaces/delegates):
+            Allows a more DERIVED type to be used where a BASE type is expected.
+            "out T" = T can only appear as a RETURN type (coming OUT of methods).
 
+            Real-world analogy:
+              IEnumerable<Dog> can be used as IEnumerable<Animal>
+              because every Dog IS an Animal.
+
+            Syntax: interface IProducer<out T> { T Produce(); }
+
+            Rules:
+              - T can appear as return type only
+              - T CANNOT appear as parameter type
+              - Only valid on interfaces and delegates
+            */
+
+            //IProducer<Dog> dogProducer = new DogProducer();
+            //IProducer<Animals> animalProducer = dogProducer; 
+                                                            
+
+            //Animals a = animalProducer.Produce();
+            //Console.WriteLine(a.Sound());
+
+            //IEnumerable<Dog> dogs = new List<Dog> { new Dog() };
+            //IEnumerable<Animals> animals = dogs; 
+            //foreach (Animals animal in animals)
+            //    Console.WriteLine(animal.Sound());
+
+            #endregion
 
         }
     }
