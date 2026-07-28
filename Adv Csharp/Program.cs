@@ -356,8 +356,37 @@ namespace Adv_Csharp
 
             #region Question 17
             // Covariance(out): Use when your generic interface or delegate only produces T.
-            
+
             // Contravariance (in): Use when your generic interface or delegate only consumes T.
+
+            #endregion
+
+            #region Question 18
+            //How do static members work in generic types?
+            /*
+            Static members in generic classes are SEPARATE PER CLOSED TYPE.
+            Each different T gets its OWN copy of static members.
+
+            Counter<int>    has its own static Count
+            Counter<string> has its own static Count
+            They do NOT share the same static field!
+            */
+
+            //var c1 = new Counter<int>(1);
+            //var c2 = new Counter<int>(2);
+            //var c3 = new Counter<int>(3);
+
+
+            //var s1 = new Counter<string>("A");
+            //var s2 = new Counter<string>("B");
+
+            //Console.WriteLine($"Counter<int>    instances: {Counter<int>.GetCount()}");    // 3
+            //Console.WriteLine($"Counter<string> instances: {Counter<string>.GetCount()}"); // 2
+            //                                                                               // They are completely independent!
+
+            //Counter<int>.Reset();
+            //Console.WriteLine($"After reset: {Counter<int>.GetCount()}");    
+            //Console.WriteLine($"String still: {Counter<string>.GetCount()}"); 
 
             #endregion
 
