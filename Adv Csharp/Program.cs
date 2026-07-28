@@ -1,6 +1,7 @@
 ﻿using Adv_Csharp.Interfaces;
 using System.ComponentModel;
 using System.Data;
+using System.Runtime.Intrinsics.X86;
 
 namespace Adv_Csharp
 {
@@ -314,7 +315,7 @@ namespace Adv_Csharp
 
             //IProducer<Dog> dogProducer = new DogProducer();
             //IProducer<Animals> animalProducer = dogProducer; 
-                                                            
+
 
             //Animals a = animalProducer.Produce();
             //Console.WriteLine(a.Sound());
@@ -325,6 +326,41 @@ namespace Adv_Csharp
             //    Console.WriteLine(animal.Sound());
 
             #endregion
+
+            #region Question 16
+            //What is contravariance? Explain the 'in' keyword.
+            /*
+            CONTRAVARIANCE (in keyword on interfaces/delegates):
+            Allows a BASE type to be used where a DERIVED type is expected.
+            "in T" = T can only appear as a PARAMETER type (going IN to methods).
+
+            Real-world analogy:
+              IComparer<Animal> can be used as IComparer<Dog>
+              because an Animal comparer can handle Dogs too.
+
+            Syntax: interface IConsumer<in T> { void Consume(T item); }
+            */
+
+            //IConsumer<Animall> animalConsumer = new AnimalConsumer();
+            //IConsumer<Dogg> dogConsumer = animalConsumer; 
+
+
+            //dogConsumer.Consume(new Dogg { Name = "Rex" }); 
+
+            //// Built-in contravariance example:
+            //Action<Animall> printAnimal = a => Console.WriteLine(a.Name);
+            //Action<Dogg> printDog = printAnimal; 
+            //printDog(new Dogg { Name = "Buddy" }); 
+
+            #endregion
+
+            #region Question 17
+            // Covariance(out): Use when your generic interface or delegate only produces T.
+            
+            // Contravariance (in): Use when your generic interface or delegate only consumes T.
+
+            #endregion
+
 
         }
     }
