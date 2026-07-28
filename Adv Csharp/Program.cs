@@ -274,6 +274,24 @@ namespace Adv_Csharp
 
             #endregion
 
+            #region Question 14
+            // Write a SafeList<T> that returns default when the index is invalid.
+
+            var safeInts = new SafeList<int>();
+            safeInts.Add(10);
+            safeInts.Add(20);
+            safeInts.Add(30);
+
+            Console.WriteLine(safeInts.Get(0));   
+            Console.WriteLine(safeInts.Get(1));   
+            Console.WriteLine(safeInts.Get(99)); 
+            Console.WriteLine(safeInts[-1]);       
+
+            var safeStrings = new SafeList<string>();
+            safeStrings.Add("Hello");
+            Console.WriteLine(safeStrings.Get(5) == null ? "null" : safeStrings.Get(5));
+            #endregion
+
 
 
         }
