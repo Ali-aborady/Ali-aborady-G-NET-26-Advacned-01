@@ -69,6 +69,32 @@
 
             #endregion
 
+            #region question 4
+            //Generic Method: Swap<T>
+
+            /*
+            A GENERIC METHOD is a method with its OWN type parameter,
+            independent of the class it belongs to.
+            
+            Syntax:  public static void MethodName<T>(...)
+            The compiler infers T from the arguments passed.
+            */
+
+            //int x = 5, y = 10;
+            //Console.WriteLine($"Before: x={x}, y={y}"); 
+            //Utilities.Swap<int>(ref x, ref y);
+            //Console.WriteLine($"After:  x={x}, y={y}"); 
+
+
+            //string s1 = "Hello", s2 = "World";
+            //Console.WriteLine($"Before: s1={s1}, s2={s2}");
+            //Utilities.Swap(ref s1, ref s2); 
+            //Console.WriteLine($"After:  s1={s1}, s2={s2}");
+
+
+            #endregion
+
+
         }
     }
 }
