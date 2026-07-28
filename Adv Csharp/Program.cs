@@ -390,6 +390,35 @@ namespace Adv_Csharp
 
             #endregion
 
+            #region Question 19
+            //How can you inherit from a generic class?
+            /*
+            Three ways to inherit from a generic class:
+            
+            1. CLOSED inheritance:  class Child : Base<int>
+               : Child fixes T as int, Child itself is NOT generic
+            
+            2. OPEN inheritance:    class Child<T> : Base<T>
+               : Child passes T through, Child is also generic
+            
+            3. PARTIAL:             class Child<T, U> : Base<T>
+               : Child has extra type parameters beyond the base
+            */
+
+            //// Closed
+            //var strRepo = new StringRepository();
+            //strRepo.Add("hello"); 
+
+            //// Open
+            //var logRepo = new LoggedRepository<int>();
+            //logRepo.Add(42); 
+
+            //// Partial
+            //var keyRepo = new KeyedRepository<string, int>();
+            //keyRepo.AddWithKey("score", 100);
+            //Console.WriteLine(keyRepo.GetByKey("score"));
+
+            #endregion
 
         }
     }
