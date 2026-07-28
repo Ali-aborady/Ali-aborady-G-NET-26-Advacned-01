@@ -1,4 +1,7 @@
-﻿namespace Adv_Csharp
+﻿using System.ComponentModel;
+using System.Data;
+
+namespace Adv_Csharp
 {
     internal class Program
     {
@@ -163,6 +166,29 @@
 
             #endregion
 
+            #region Question 9
+            //What is the 'new()' constraint? Write an example.
+
+                /*
+                The 'new()' constraint requires T to have a PUBLIC PARAMETERLESS CONSTRUCTOR.
+                This allows you to create new instances of T inside the generic class/method.
+                
+                Syntax: where T : new ()
+                Note: new () must be the LAST constraint if combined with others.
+                */
+
+            //var animalFactory = new Factory<Animal>();
+            //Animal a = animalFactory.Create();
+            //Console.WriteLine(a); 
+
+            //Animal[] animals = animalFactory.CreateArray(3);
+            //Console.WriteLine(animals.Length); 
+
+            //var intFactory = new Factory<int>(); 
+            //int n = intFactory.Create();
+            //Console.WriteLine(n); 
+
+            #endregion
 
 
 
