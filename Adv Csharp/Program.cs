@@ -94,6 +94,26 @@
 
             #endregion
 
+            #region Question 5
+            //Generic Method FindMax<T>
+
+                /*
+                FindMax<T> finds the largest element in an array.
+                We need T to implement IComparable<T> so we can compare values.
+                This is a generic constraint (covered in Q10).
+                */
+
+            //int[] ints = { 3, 7, 1, 9, 4 };
+            //double[] doubles = { 1.5, 3.2, 0.8, 2.9 };
+            //string[] words = { "banana", "apple", "cherry" };
+
+            //Console.WriteLine(SearchHelper.FindMax(ints));    // 9
+            //Console.WriteLine(SearchHelper.FindMax(doubles)); // 3.2
+            //Console.WriteLine(SearchHelper.FindMax(words));   // cherry
+
+            #endregion
+
+
 
         }
     }
